@@ -347,7 +347,10 @@ spec:
             memory: 750Mi
         env:
         - name: BOLD_SERVICES_HOSTING_ENVIRONMENT
-          value: k8s
+          valueFrom:
+            configMapKeyRef:
+              name: bold-bi-config
+              key: BOLD_SERVICES_HOSTING_ENVIRONMENT
         readinessProbe:
           httpGet:
             path: /health-check
