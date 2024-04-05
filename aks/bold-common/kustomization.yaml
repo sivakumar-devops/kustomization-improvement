@@ -1,0 +1,53 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: bold-services
+resources:
+  - ../boldcommon-manifest
+
+#Enter your azure nfs path and server
+patches:
+  - target:
+      kind: PersistentVolume
+      name: bold-fileserver
+    patch: |-
+      - op: replace
+        path: /spec/nfs/path
+        value: "/<storage_account_name>/<fileshare_name>/<folder_name>"
+      - op: replace
+        path: /spec/nfs/server
+        value: "<storage_account_name>.file.core.windows.net"
+configMapGenerator:
+- name: bold-bi-config
+  namespace: bold-services
+  literals:
+    #Enter Your AppBase URL
+    - APP_BASE_URL=<AppBase-URL>
+    - BOLD_SERVICES_HOSTING_ENVIRONMENT=k8s
+    - INSTALL_OPTIONAL_LIBS=mongodb,mysql,influxdb,snowflake,oracle,clickhouse,google
+    - BOLD_SERVICES_USE_SITE_IDENTIFIER=true
+images:
+  - name: gcr.io/boldbi-294612/boldbi-server-api
+    newTag: 7.4.11 
+
+  - name: gcr.io/boldbi-294612/boldbi-server-jobs
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/boldbi-server
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/boldbi-designer
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/bold-etl
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/bold-identity-api
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/bold-ums
+    newTag: 7.4.11
+
+  - name: gcr.io/boldbi-294612/bold-identity
+    newTag: 7.4.11
+generatorOptions:
+  disableNameSuffixHash: true
