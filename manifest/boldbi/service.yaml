@@ -15,6 +15,7 @@ spec:
   selector:
     app: id-web
 ---
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -32,6 +33,7 @@ spec:
   selector:
     app: id-api
 --- 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -49,6 +51,7 @@ spec:
   selector:
     app: id-ums
 --- 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -66,6 +69,7 @@ spec:
   selector:
     app: bi-web
 --- 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -83,6 +87,7 @@ spec:
   selector:
     app: bi-api
 --- 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -100,6 +105,7 @@ spec:
   selector:
     app: bi-jobs
 --- 
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -116,6 +122,7 @@ spec:
     protocol: TCP
   selector:
     app: bi-dataservice
+---
 ---
 apiVersion: v1
 kind: Service
