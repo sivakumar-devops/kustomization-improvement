@@ -37,6 +37,7 @@ Currently we have provided support for [`Nginx`](https://kubernetes.github.io/in
 2. Create a Kubernetes cluster in Local machine to deploy Bold BI.
 4. Create a Database.
 5. Open the Kustomization.yaml file that was downloaded in Step 1. Replace the `mount path` noted in the steps above with `<Example/path/here>` respectively, in the file.
+
     ![Replace File storage name](images/path_before.png)
     ![After Replacing File Storage name](images/path_change.png)
 7. After createing with your cluster, deploy the latest Nginx ingress controller to your cluster.
