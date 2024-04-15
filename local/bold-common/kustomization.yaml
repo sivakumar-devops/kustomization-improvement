@@ -6,7 +6,6 @@ resources:
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/log4net_config.yaml
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/pvclaim_onpremise.yaml
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/service.yaml
-  #- hpa
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/deployment.yaml
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/boldcommon-ingress.yaml
   - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/reports/deployment.yaml
