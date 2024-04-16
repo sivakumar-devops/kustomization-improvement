@@ -14,7 +14,7 @@ To deploy Bold BI in Local Cluster, you need to have the following prerequisites
 | ------------- | ------------- | -----------|
 | Rancher Desktop | Windows,Linux and MacOS| [Link](https://docs.rancherdesktop.io/getting-started/installation/)
 | K0s Cluster | Windows,Linux and MacOS  | [Link](https://docs.k0sproject.io/v1.27.2+k0s.0/install/)
-| Kind Cluster | Linux and MacOS  | [Link](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
+| Kind Cluster | Windows,Linux and MacOS  | [Link](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 |Kubeadm Cluster | Windows,Linux and MacOS | [Link](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
 
