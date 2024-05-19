@@ -2,7 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: bold-services
 resources:
-  - ../boldbi-manifest
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/namespace.yaml
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/log4net_config.yaml
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/pvclaim_gke.yaml
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/service.yaml
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/deployment.yaml
+  - https://raw.githubusercontent.com/sivakumar-devops/kustomization-improvement/main/manifest/boldbi/configuration/boldbi-ingress.yaml
 
 #Enter your GKS nfs Path and GKS nfs server 
 patches:
